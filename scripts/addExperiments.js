@@ -282,7 +282,8 @@ async function addExperiments() {
         }
       }
     }
-
+    console.log('All experiments added successfully');
+    
     console.log('All experiments added successfully');
   } catch (error) {
     console.error('Error adding experiments:', error);
