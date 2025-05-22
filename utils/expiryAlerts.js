@@ -42,7 +42,6 @@ const sendExpiryAlert = async (chemical) => {
 
   await notification.save();
 
-  console.log(`Expiry alert sent for ${chemical.chemicalName}`);
 };
 
 // Function to check for chemicals nearing expiry

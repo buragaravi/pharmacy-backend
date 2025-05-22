@@ -11,7 +11,7 @@ const authenticate = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log('Decoded token:', decoded); // Debug log
+    
 
     const userId = decoded.user.id;
     const userRole = decoded.user.role; // Get role from token
@@ -30,11 +30,6 @@ const authenticate = async (req, res, next) => {
       role: userRole // Ensure role is set from token
     };
     req.userId = userId;
-
-    console.log('Authenticated user:', {
-      id: req.userId,
-      role: req.user.role
-    }); // Debug log
 
     next();
   } catch (error) {
